@@ -25,7 +25,7 @@ config :laughing_octo_invention, LaughingOctoInventionWeb.Endpoint,
   secret_key_base: "R2uXa2b7WqfiaweNsJmlpE0ohLQ4Mg/xT5JEUXtXjKVFi6Gs8hk3D+mk8r3nEg05",
   watchers: [
     # Start the esbuild watcher by calling Esbuild.install_and_run(:default, args)
-    esbuild: {Esbuild, :install_and_run, [:default, ~w(--sourcemap=inline --watch)]}
+    node: ["build.js", "--watch", cd: Path.expand("../assets", __DIR__)]
   ]
 
 # ## SSL Support
