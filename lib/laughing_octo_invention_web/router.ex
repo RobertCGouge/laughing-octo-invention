@@ -17,7 +17,7 @@ defmodule LaughingOctoInventionWeb.Router do
   scope "/", LaughingOctoInventionWeb do
     pipe_through :browser
 
-    get "/", PageController, :index
+    get "/", PageController, :hello
   end
 
   # Other scopes may use custom stacks.
