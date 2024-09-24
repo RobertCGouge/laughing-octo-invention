@@ -9,7 +9,7 @@ defmodule LaughingOctoInventionWeb.StaticPageControllerTest do
       |> get(Routes.static_page_path(conn, :home))
 
     html_response(conn, 200)
-    |> assert_select("title", "Home | #{@base_title}")
+    |> assert_select("title", "#{@base_title}")
   end
 
   test "should get help", %{conn: conn} do

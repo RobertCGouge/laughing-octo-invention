@@ -13,9 +13,6 @@ defmodule LaughingOctoInventionWeb.DynamicTextHelpers do
     [title, " | ", @base_title]
   end
 
-  defp get_page_title(%{action: :home}),
-    do: "Home"
-
   defp get_page_title(%{action: :help}),
     do: "Help"
 
