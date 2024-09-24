@@ -48,8 +48,8 @@ defmodule LaughingOctoInvention.MixProject do
       {:telemetry_poller, "1.0.0"},
       {:gettext, "0.19.1"},
       {:jason, "1.3.0"},
-      {:plug_cowboy, "2.5.2"},
-      {:html_assertion, "0.1.5", only: :test},
+      {:plug_cowboy, "2.7.0"},
+      {:html_assertion, "0.1.5", only: :test}
     ]
   end
 

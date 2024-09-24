@@ -8,5 +8,4 @@ defmodule LaughingOctoInventionWeb.PageController do
   def hello(conn, _params) do
     html(conn, "hello, world!")
   end
-
 end

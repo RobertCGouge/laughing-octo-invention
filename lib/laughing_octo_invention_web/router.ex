@@ -5,7 +5,7 @@ defmodule LaughingOctoInventionWeb.Router do
     plug :accepts, ["html"]
     plug :fetch_session
     plug :fetch_live_flash
-    plug :put_root_layout, {LaughingOctoInventionWeb.LayoutView, :root}
+    # plug :put_root_layout, {LaughingOctoInventionWeb.LayoutView, :root}
     plug :protect_from_forgery
     plug :put_secure_browser_headers
   end
@@ -18,6 +18,9 @@ defmodule LaughingOctoInventionWeb.Router do
     pipe_through :browser
 
     get "/", PageController, :hello
+    get "/static_pages/home", StaticPageController, :home
+    get "/static_pages/help", StaticPageController, :help
+    get "/static_pages/about", StaticPageController, :about
   end
 
   # Other scopes may use custom stacks.
