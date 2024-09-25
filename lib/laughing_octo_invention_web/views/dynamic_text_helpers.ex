@@ -1,4 +1,7 @@
 defmodule LaughingOctoInventionWeb.DynamicTextHelpers do
+  alias LaughingOctoInventionWeb.StaticPageView
+  alias LaughingOctoInventionWeb.UserView
+
   @base_title "Phoenix Tutorial Sample App"
 
   def page_title(assigns) do
@@ -13,17 +16,29 @@ defmodule LaughingOctoInventionWeb.DynamicTextHelpers do
     [title, " | ", @base_title]
   end
 
-  defp get_page_title(%{action: :help}),
+  defp get_page_title(%{action: :home}),
+    do: "Home"
+
+  defp get_page_title(%{view_module: StaticPageView,
+    action: :help}),
     do: "Help"
 
-  defp get_page_title(%{action: :about}),
+  defp get_page_title(%{view_module: StaticPageView,
+    action: :about}),
     do: "About"
 
-  defp get_page_title(%{action: :contact}),
+  defp get_page_title(%{view_module: StaticPageView,
+    action: :contact}),
     do: "Contact"
 
-  defp get_page_title(%{action: _}),
-    do: nil
+    defp get_page_title(%{view_module: UserView,
+    action: :new}),
+    do: "Sign up"
+
+  defp get_page_title(%{view_module: _,
+    action: _,
+    title: title}),
+    do: title
 
   defp get_page_title(_), do: nil
 end

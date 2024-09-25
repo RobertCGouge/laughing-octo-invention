@@ -1,6 +1,10 @@
 defmodule LaughingOctoInventionWeb.StaticPageController do
   use LaughingOctoInventionWeb, :controller
 
+  def root(conn, _params) do
+    render(conn, "home.html")
+  end
+
   def home(conn, _params) do
     render(conn, "home.html")
   end
